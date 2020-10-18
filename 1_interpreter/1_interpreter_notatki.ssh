@@ -1,0 +1,59 @@
+### uruchamianie interpretera
+
+# #-komentarz
+# $ znak zachęty powłoki
+
+# zazwyczaj w postaci użytkownik#nazwa-komputera
+
+#
+bash date
+
+# uruchomienie pliku
+bash ./skrypt1
+
+# uruchomienie pliku z opcją -x
+# interpreter wypisuje polecenia, które wykonuje
+bash -x 1_interpreter/skrypt1
+
+### Podstawowe polecenia
+
+# ścieżka katalogu, w którym aktualnie się znajdujemy
+pwd
+# zmiana katalogu
+cd "C:/Users/User/IdeaProjects/Bash"
+# zawartość katalogu, ls -a - lista wszystkich plików
+ls
+# touch - tworzy plik o podanej nazwie
+# jeśli plik już istnieje, zmienia jego datę na bieżącą
+touch test.txt
+
+# zwraca zawartość podanych plików na standardowe wyjście
+# czyli standardowe wyświetla tekst z pliku w terminalu
+cat test.txt
+
+# tworzy katalog o podanej nazwie
+mkdir 1_interpreter_test_mkdir
+
+# "usuwa" pliki/katalogi podane jako argumenty
+rm test.txt
+rm test*
+rm Test -r
+
+# plik podany jako pierwszy argument kopiuje do pliku podanego jako drugi argument
+cp 1_interpreter_notatki.ssh copy_1_interpreter_notatki.ssh
+
+# move files - zmienia nazwępliku na nazwę drugiego pliku
+mv
+
+# wyświetla podręcznik użytkownika do polecenia podanego jako argument
+man cat
+
+# wyświetla nazwę użytkownika, pod którą jesteśmy zalogowani
+whoami
+echo "$USER"
+
+# SYNOPSIS
+man man
+
+### EDYTORY
+man nano
