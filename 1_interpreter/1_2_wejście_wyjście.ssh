@@ -1,15 +1,26 @@
-## >  - przekierowanie wyjścia na plik
+### strumien wyjscia
+## >  -  przekierowanie wyjścia na plik
 ls -alR / > drzewokatalogow.txt
 wc -l drzewokatalogow.txt
 # program wc podaje kolejno liczbę linii, słów i znaków w plikach podanych jako argumenty
 # wc -l - tylko ilość linii
 # wc -c - tylko ilość znaków
 
-# >> - wynik programu dodany na końcu pliku
+## dodatkowe info
+# strumien wyjscia
+ls -l /usr/bin > ls-output.txt
+ls -l ls-output.txt
+#
+less ls-output.txt
+# > - zawsze calkowicie nadpisuje plik docelowy!!!
+# sztuczka! mozemy oprozniac pliki, na przyklad:
+> ls-output.txt
+
+## >> - wynik programu dodany na końcu pliku
 ls -alR />> drzewokatalogow.txt
 wc -l drzewokatalogow.txt
 
-## < - przekierowanie wejścia na plik
+### < - przekierowanie wejścia na plik
 cat > plik.txt
 ala
 ma
@@ -17,9 +28,26 @@ kota
 ^D
 wc < plik.txt
 
-## 2> przekierowanie wyjścia diagnostycznego
+
+
+### 2> przekierowanie wyjścia diagnostycznego (strumienia bledow)
+# 0, 1 i 2 to deskryptory strumieni plikow
+# 2 to deskryptor strumienia bledow
 rm plik_ktorego_nie.txt 2> blad.txt
 cat blad.txt
 
-## usuwanie poufnych danych
+### strumien wyjscia i standardowego strumienia bledow w jednym pliku
+ls -l /bin/usr > ls-output.txt 2>&1
+# najpierw przekierowujemy stdin do pliku
+# a potem deskryptor pliku 2 do deskryptora pliku 1
+ls -l /bin/usr &> ls-output.txt
+# &> - przekierowywanie stdout i stderr w nowszych wersjach basha
+
+#/dev/null - smietnik w Unixie
+
+### usuwanie poufnych danych
 shred
+
+
+
+

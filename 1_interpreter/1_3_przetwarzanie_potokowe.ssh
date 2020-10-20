@@ -1,0 +1,45 @@
+### przetwarzanie potokowe
+# sort - sortuje leksykograficznie linie plikw podanych jako argumenty
+# uniq - usuwa powtarzajace sie sasiednie linie
+sort pl.txt > wyniki
+uniq < wynik1 > wynik2
+# albo
+# | - symbol wykorzystywany do utworzenia potoku procesow bez korzystania z plikow
+sort pl.txt | uniq | wc -l
+
+### wykonywanie w tle
+# znak &
+ls -alR / > drzewokatalogow.txt &
+
+### dodatkowe info
+## filtry
+# pobieraja dane wejsciowe - przetwarzaja je - zwracaja wynik
+# pobieramy dane -> sortujemy -> wyswietlamy
+ls ./Pictures ./Videos | sort | less
+
+## powtarzajace sie wiersze
+# polecenie uniq usuwa z listy wszystkie duplikaty
+ls ./Pictures ./Videos | sort | uniq | less
+# uniq -d  pokazuje liste duplikatow
+ls ./Pictures ./Videos | sort | uniq -d | less
+
+## wc - wypisywanie licznikow wierszy, slow oraz bajtow
+# wc - word count
+wc ls-output.txt
+
+## grep - wypisywanie wierszy pasujacych do wzorca
+# grep wzorzec [plik...]
+# na przyklad wszystkie pliki z fragmentem 'zip'
+ls /bin /usr/bin | sort | uniq | grep zip
+# -i ignorowanie wielkosci liter
+# -v tylko wiersze niepasujace do wzorca
+
+## head(tail) - koniec i poczatek pliku
+head -n 5 ls-output.txt
+tail -n 5 ls-output.txt
+# -f wyswietlanie zawartosci w czasie rzeczywistym
+tail -f /var/log/messages
+
+## tee - pobieranie danych z stdin, przekazywanie ich do stdout i do plikow
+# przechwycimy cala zawartosc folderu -> przekazemy do pliku -> przefiltrujemy zawartosc potoku
+ls /usr/bin | tee ls.txt | grep zip
