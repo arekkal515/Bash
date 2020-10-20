@@ -1,0 +1,25 @@
+## >  - przekierowanie wyjścia na plik
+ls -alR / > drzewokatalogow.txt
+wc -l drzewokatalogow.txt
+# program wc podaje kolejno liczbę linii, słów i znaków w plikach podanych jako argumenty
+# wc -l - tylko ilość linii
+# wc -c - tylko ilość znaków
+
+# >> - wynik programu dodany na końcu pliku
+ls -alR />> drzewokatalogow.txt
+wc -l drzewokatalogow.txt
+
+## < - przekierowanie wejścia na plik
+cat > plik.txt
+ala
+ma
+kota
+^D
+wc < plik.txt
+
+## 2> przekierowanie wyjścia diagnostycznego
+rm plik_ktorego_nie.txt 2> blad.txt
+cat blad.txt
+
+## usuwanie poufnych danych
+shred
