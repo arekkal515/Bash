@@ -1,0 +1,50 @@
+### PROSTE ZMIENNE
+
+# deklaracja
+zm=wart
+
+# odwolanie sie do zmiennej
+echo $zm
+
+### ZMIENNE TABLICOWE
+# jednowymiarowe, dynamiczne, tablicowe
+# indeksowane od zera
+# skladnia [indeks]=wartosc
+# albo zmienna=(element0 element1 element 2 ... elementN)
+# odwolanie do elementu ${zmienna[indeks]}
+# odwolanie sie do calej tablicy * albo @
+
+#dlugosc zmiennej ${#ZMIENNA}
+bash$ zmienna="ala"
+bash$ echo ${#zmienna}
+3
+bash$ _
+
+
+### WYRAZENIA ARYTMETYCZNE
+# bezposrednio w bashu albo poprzez expr
+bash$ echo $[1 + 2]
+3
+bash$ i=5
+bash$ echo $i
+5
+bash$ i=$[i + 3]
+bash$ echo $i
+8
+bash$ i=$[i * 4]
+bash$ echo $i
+32
+bash$ _
+# expr
+bash$ expr 1 + 2
+3
+bash$ i=5
+bash$ echo $i
+5
+bash$ i=`expr $i + 3`
+bash$ echo $i
+8
+bash$ i=`expr $i \* 4`
+bash$ echo $i
+32
+bash$ _

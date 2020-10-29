@@ -1,0 +1,19 @@
+### usuniecie wszystkich plikow z rozszerzeniem txt
+
+rm `find .-name "*.txt"`
+
+# nie zadziala
+# ale zadziala
+
+find .-name"*.txt" -exec rm "{}" ';'
+
+### co bedzie efetem wykonania polecenia
+wc -l `find . -name "*.txt" -exec echo "{}" ';'`
+
+# wc - word count - liczba slow
+# polecenie wyswietli ilosc linii w kazdym pliku z rozszerzeniem .txt
+# policzenie ile jest linii we wszystkich plikach tekstowych razem i z osobna, z bieżącego katalogu i w jego podkatalogach
+# "*.txt" - nie rozwinie wzorcow nazw plikow w tym napisie
+
+
+

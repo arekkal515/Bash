@@ -1,0 +1,11 @@
+bash$ touch ala
+bash$ touch "ala kot.txt"
+bash$ ls -1
+ala
+ala kot.txt
+bash$ rm `find . -name "*.txt"`
+rm: nie można usunąć `kot.txt': Nie ma takiego pliku ani katalogu
+bash$ ls -1
+ala kot.txt
+
+
