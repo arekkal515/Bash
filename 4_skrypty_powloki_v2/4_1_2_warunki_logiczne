@@ -1,0 +1,25 @@
+# Napisać skrypt comp, który ma dwa argumenty
+# liczbowe i wypisuje -1, gdy pierwszy
+# argument jest mniejszy niż drugi, 0
+# gdy są równe a -1 gdy pierwszy argument
+# jest większy niż drugi. Skrypt ma sprawdzić,
+#  czy ma dobrą liczbę argumentów. Skrypt
+#  będzie wywoływany następująco:
+
+#./comp arg1 arg2
+
+#!/bin/bash
+
+if test $# -ne 2; then
+  echo "usage: $0 text1 text2"
+  exit 1
+fi
+# wiemy, ze mamy dwa argumenty, ale nie wiemy
+# czy to liczby, ale zakladamy, ze sa to liczby
+if [ $1 -eq $2]; then
+  echo 0
+elif [$1 -lt $2]; then
+  echo -1
+else
+  echo 1
+fi
