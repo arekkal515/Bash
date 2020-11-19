@@ -8,5 +8,7 @@ bash$ _
 bash$ export MYPROG_HOME=/usr/home/myprog
 bash$ _
 
-# wyswietlanie wszystkich zmiennych srodowiskowych
+# wyswietlanie wszystkich zmiennych
 bash$ set
+# wyswietlanie wszystkich zmiennych srodowiskowych
+bash$ printenv

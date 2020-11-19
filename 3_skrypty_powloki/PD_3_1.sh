@@ -6,13 +6,13 @@
 
 echo -n "Podaj numer argumentu. "
 read n
-if [[ $2 -ne 0 ]]; then
-  echo "Drugi parametr istnieje."
-else
+if [[ -z $2 ]]; then
   echo "Drugi parametr nie istnieje."
+else
+  echo "Drugi parametr istnieje."
 fi
-if [[ $n -ne 0 ]]; then
-  if [ -z $9 ]; then
-    echo "Parametr $n istnieje."
-  fi
+if [[ -z $n ]]; then
+  echo "Parametr $n nie istnieje."
+else
+  echo "Parametr $n istnieje."
 fi
