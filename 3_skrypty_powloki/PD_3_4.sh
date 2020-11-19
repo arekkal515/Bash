@@ -5,7 +5,5 @@
 
 # w zalozeniu, ze tekst to kazde nowe slowo
 
-touch temp.txt
-sort -t ' ' $1 > temp.txt
-mv temp.txt $1
+sort -t ' ' -o $1 $1
 cat $1
