@@ -1,0 +1,3 @@
+Hello!
+Pierwsza Linijka.
+Zobaczmy czy dziala.
