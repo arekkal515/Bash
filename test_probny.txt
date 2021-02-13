@@ -1,0 +1,10 @@
+Skrypt pobiera wiele argumentów: nazwy plików i katalogów, ale nie tylko.
+Wszystkie argumenty, które są nazwami plików, sklejamy w jeden plik, o nazwie,
+która jest sklejeniem wszystkich nazw plików i o treści, która jest sklejeniem
+treści wszystkich plików. Czyli, jak mamy podane 3 argumenty, które są plikami
+o nazwach odpowiednio: a.txt, b.txt i c.txt i zawartości odpowiednio: AAA,
+BBB i CCC to ma powstać plik o nazwie a.txtb.txtc.txt o zawartosci AAABBBCCC.
+Plik ten ma zostać skopiowany do wszystkich argumentów, kóre są katalogami.
+Inne argumenty niż pliki do odczytu i katalogi do zapisu należy zignorować.
+Obowiązkowo sprawdzamy błędy.
+
